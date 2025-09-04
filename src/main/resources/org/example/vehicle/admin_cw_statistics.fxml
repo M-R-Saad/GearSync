@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../../css/stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.AdminCWStatsController">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="570.0" fitWidth="1280.0" layoutY="90.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../design/worker_profile1x.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" stroke="#616161" strokeType="INSIDE" width="1280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" layoutY="660.0" stroke="#616161" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="133.0" fitWidth="317.0" layoutX="7.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../design/logo2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="66.0" layoutY="680.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="© 2025, TEAM LEGOS, All rights reserved." textFill="#ea080d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="680.0" style="-fx-font-weight: bold; -fx-text-fill: #ea080d;" stylesheets="@../../../css/stylesheet.css" text="TEAM LEGOS" textFill="#ea080d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="customerPane" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <LineChart fx:id="cLineChart" layoutX="853.0" layoutY="87.0" prefHeight="300.0" prefWidth="400.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <PieChart fx:id="cPieChart" layoutX="914.0" layoutY="387.0" prefHeight="270.0" prefWidth="311.0" />
+            <Label layoutX="695.0" layoutY="398.0" text="Top parts buyer (Monthly):" visible="false" />
+            <Label layoutX="695.0" layoutY="540.0" text="Top servicing request (Monthly):" visible="false" />
+            <TextField fx:id="cTopBuyer1" editable="false" layoutX="695.0" layoutY="430.0" prefHeight="25.0" prefWidth="230.0" visible="false" />
+            <TextField fx:id="cTopBuyer2" editable="false" layoutX="695.0" layoutY="455.0" prefHeight="25.0" prefWidth="230.0" visible="false" />
+            <TextField fx:id="cTopBuyer3" editable="false" layoutX="695.0" layoutY="480.0" prefHeight="25.0" prefWidth="230.0" visible="false" />
+            <TextField fx:id="cTopService1" editable="false" layoutX="695.0" layoutY="570.0" prefHeight="25.0" prefWidth="230.0" visible="false" />
+            <TextField fx:id="cTopService2" editable="false" layoutX="695.0" layoutY="595.0" prefHeight="25.0" prefWidth="230.0" visible="false" />
+            <TextField fx:id="cTopService3" editable="false" layoutX="695.0" layoutY="620.0" prefHeight="25.0" prefWidth="230.0" visible="false" />
+            <TableView fx:id="customerTable" layoutX="90.0" layoutY="173.0" prefHeight="450.0" prefWidth="550.0">
+              <columns>
+                <TableColumn fx:id="cidColumn" prefWidth="32.0" text="cid" />
+                <TableColumn fx:id="cUsernameColumn" prefWidth="76.0" text="username" />
+                  <TableColumn fx:id="cFullNameColumn" prefWidth="84.0" text="fullname" />
+                  <TableColumn fx:id="cEmailColumn" prefWidth="135.0" text="email" />
+                  <TableColumn fx:id="cPhoneColumn" prefWidth="94.0" text="phone" />
+                  <TableColumn fx:id="cAddressColumn" prefWidth="126.0" text="address" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="workerPane" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <TableView fx:id="workerTable" layoutX="54.0" layoutY="180.0" prefHeight="300.0" prefWidth="550.0">
+               <columns>
+                  <TableColumn fx:id="widColumn" prefWidth="34.0" text="wid" />
+                  <TableColumn fx:id="wUsernameColumn" text="username" />
+                  <TableColumn fx:id="wFullNameColumn" prefWidth="98.0" text="fullname" />
+                  <TableColumn fx:id="wEmailColumn" prefWidth="154.0" text="email" />
+                  <TableColumn fx:id="wPhoneColumn" prefWidth="101.0" text="phone" />
+                  <TableColumn fx:id="wStatusColumn" prefWidth="81.0" text="status" />
+               </columns>
+            </TableView>
+            <LineChart fx:id="wLineChart" layoutX="818.0" layoutY="89.0" prefHeight="300.0" prefWidth="400.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </LineChart>
+            <PieChart fx:id="wPieChart" layoutX="877.0" layoutY="370.0" prefHeight="290.0" prefWidth="315.0" />
+            <Label layoutX="66.0" layoutY="515.0" text="Top Worker (Monthly):" />
+            <TextField fx:id="wTopWorker1" editable="false" layoutX="66.0" layoutY="547.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="wTopWorker2" editable="false" layoutX="66.0" layoutY="572.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="wTopWorker3" editable="false" layoutX="66.0" layoutY="597.0" prefHeight="25.0" prefWidth="230.0" />
+            <Button layoutX="386.0" layoutY="529.0" mnemonicParsing="false" onAction="#verifyWorker" prefHeight="40.0" prefWidth="199.0" text="Verify" />
+            <Button layoutX="494.0" layoutY="581.0" mnemonicParsing="false" onAction="#suspendWorker" prefHeight="40.0" prefWidth="91.0" text="Suspend" />
+            <Button layoutX="386.0" layoutY="581.0" mnemonicParsing="false" onAction="#activateWorker" prefHeight="40.0" prefWidth="91.0" text="Activate" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="207.0" layoutY="112.0" mnemonicParsing="false" onAction="#showWorkerPane" prefHeight="40.0" text="Worker" />
+      <Button layoutX="350.0" layoutY="112.0" mnemonicParsing="false" onAction="#showCustomerPane" prefHeight="40.0" text="Customer" />
+      <MenuBar layoutX="548.0" layoutY="15.0" onDragDetected="#cwStatistics" prefHeight="60.0" prefWidth="730.0" stylesheets="@../../../css/stylesheet.css">
+         <menus>
+            <Menu mnemonicParsing="false" text="HOME">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToHomePage" text="HOME" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="CHAT">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#chatWithCW" text="CUSTOMER" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#chatWithCW" text="WORKER" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="STATISTICS">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cwStatistics" text="WORKER" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#cwStatistics" text="CUSTOMER" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="ADD &amp; UPDATE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addParts" text="VEHICLE PARTS" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#addCarWash" text="CAR WASH PLANS" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="SERVICE STATS." />
+            <Menu mnemonicParsing="false" text="ABOUT US">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="ABOUT US" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="LOG OUT">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#logOut" text="LOGOUT" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

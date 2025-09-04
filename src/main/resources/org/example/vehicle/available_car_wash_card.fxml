@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="275.0" prefWidth="560.0" stylesheets="@../../../css/stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.CarWashCardController2">
+    <children>
+         <ImageView fx:id="carImage" fitHeight="250.0" fitWidth="300.0" layoutX="14.0" layoutY="13.0" />
+          <Label fx:id="planName" layoutX="331.0" layoutY="8.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Plan Name:" />
+          <Label fx:id="cwid" layoutX="331.0" layoutY="38.0" prefHeight="20.0" prefWidth="37.0" text="cwid:" />
+          <Label fx:id="cid" layoutX="331.0" layoutY="63.0" text="cid:" />
+          <Label fx:id="carLocation" layoutX="331.0" layoutY="88.0" text="Car Location:" />
+          <Label fx:id="carModel" layoutX="331.0" layoutY="113.0" text="Car Model: " />
+          <Label fx:id="date_time" layoutX="331.0" layoutY="138.0" text="Time:" />
+          <Label fx:id="price" layoutX="334.0" layoutY="164.0" text="Price:" />
+          <Label fx:id="createdAt" layoutX="334.0" layoutY="189.0" text="Created At: " />
+          <Button fx:id="takeJobButton" layoutX="401.0" layoutY="219.0" onAction="#handleTakeJob" prefHeight="35.0" prefWidth="115.0" text="Take This Job" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefWidth="390.0" spacing="10" style="-fx-background-color: #181617; -fx-padding: 15; -fx-border-color: #000000;" stylesheets="@../../../css/stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.PartsCardController">
+   <children>
+      <ImageView fx:id="partImage" fitHeight="150.0" fitWidth="150.0" />
+      <VBox spacing="5.0">
+         <children>
+            <Label fx:id="partName" style="-fx-font-weight: bold; -fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+            <Label fx:id="partDescription" stylesheets="@../../../css/stylesheet.css" wrapText="true" />
+            <Label fx:id="partPrice" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+            <Label fx:id="stockStatus" style="-fx-font-weight: bold; -fx-text-fill: red;" stylesheets="@../../../css/stylesheet.css" />
+            <HBox alignment="CENTER_LEFT" spacing="5">
+               <children>
+                  <Spinner fx:id="quantitySpinner" />
+               </children>
+            </HBox>
+            <Button fx:id="addToCart" onAction="#handleAddToCart" text="Add to Cart" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.CustomerServiceListController">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="570.0" fitWidth="1280.0" layoutY="90.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../design/worker_profile1x.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" stroke="#616161" strokeType="INSIDE" width="1280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" layoutY="660.0" stroke="#616161" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="133.0" fitWidth="317.0" layoutX="7.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../design/logo2.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="598.0" layoutY="15.0" prefHeight="60.0" prefWidth="680.0" stylesheets="@../../../css/stylesheet.css">
+         <menus>
+            <Menu mnemonicParsing="false" text="HOME">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToHomePage" text="HOME" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#goToProfile" text="PROFILE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToProfile" text="PROFILE" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="CHAT">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#chatWithAdmin" text="ADMIN" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#chatWithWorker" text="WORKER" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="SERVICES">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToRequestService" text="SERVICING" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#goToCarWash" text="CAR WASH" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="SHOP">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToVehicleParts" text="BUY PARTS" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="INVOICE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToServiceList" text="SERVICING" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#goToInvoice" text="CAR WASH" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="ABOUT US">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="ABOUT US" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="LOG OUT">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#logOut" text="LOGOUT" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="66.0" layoutY="680.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="© 2025, TEAM LEGOS, All rights reserved." textFill="#ea080d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="680.0" style="-fx-font-weight: bold; -fx-text-fill: #ea080d;" stylesheets="@../../../css/stylesheet.css" text="TEAM LEGOS" textFill="#ea080d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="serviceTable" layoutX="58.0" layoutY="102.0" prefHeight="250.0" prefWidth="460.0" stylesheets="@../../../css/stylesheet.css">
+        <columns>
+          <TableColumn fx:id="sidColumn" prefWidth="44.0" text="sid" />
+          <TableColumn fx:id="widColumn" prefWidth="50.0" text="wid" />
+            <TableColumn fx:id="titleColumn" prefWidth="167.0" text="title" />
+            <TableColumn fx:id="statusColumn" prefWidth="86.0" text="status" />
+            <TableColumn fx:id="createdAtColumn" prefWidth="110.0" text="created_at" />
+        </columns>
+      </TableView>
+      <Label layoutX="552.0" layoutY="102.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Problem Title:" />
+      <Label layoutX="551.0" layoutY="179.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Description of the Problem:" />
+      <Label layoutX="552.0" layoutY="366.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Vehicle Type:" />
+      <Label layoutX="164.0" layoutY="370.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Picture of the Parts that needs servicing:" />
+      <TextField fx:id="Title" editable="false" layoutX="552.0" layoutY="125.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <ImageView fx:id="VehicleImage" fitHeight="250.0" fitWidth="300.0" layoutX="148.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="VehicleType" editable="false" layoutX="551.0" layoutY="388.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="933.0" layoutY="102.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Worker Name:" />
+      <Label layoutX="935.0" layoutY="179.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Contact No:" />
+      <Label layoutX="941.0" layoutY="353.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Servicing Status:" />
+      <TextField fx:id="WorkerName" editable="false" layoutX="935.0" layoutY="125.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <TextField fx:id="Phone" editable="false" layoutX="935.0" layoutY="203.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <TextField fx:id="Status" editable="false" layoutX="940.0" layoutY="380.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="941.0" layoutY="428.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Payment Amount:" />
+      <Label layoutX="940.0" layoutY="502.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Requested At:" />
+      <TextField fx:id="PaymentAmount" editable="false" layoutX="941.0" layoutY="452.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <Button layoutX="639.0" layoutY="601.0" mnemonicParsing="false" onAction="#downloadPDF" prefHeight="40.0" prefWidth="125.0" stylesheets="@../../../css/stylesheet.css" text="Download PDF" />
+      <TextField fx:id="RequestedAt" editable="false" layoutX="940.0" layoutY="527.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="940.0" layoutY="581.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Last Updated Date:" />
+      <TextField fx:id="UpdatedAt" editable="false" layoutX="940.0" layoutY="606.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <Button layoutX="1013.0" layoutY="278.0" mnemonicParsing="false" onAction="#viewWorkerProfile" prefHeight="40.0" stylesheets="@../../../css/stylesheet.css" text="View Worker Profile" />
+      <ImageView fx:id="ProgressImage" fitHeight="125.0" fitWidth="125.0" layoutX="639.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea fx:id="Description" editable="false" layoutX="551.0" layoutY="203.0" prefHeight="150.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" wrapText="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.WorkerProfileController">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="570.0" fitWidth="1280.0" layoutY="90.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../design/worker_profile1x.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" stroke="#ea080d" strokeType="INSIDE" width="1280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" layoutY="660.0" stroke="#ea080d" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="133.0" fitWidth="317.0" layoutX="7.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../design/logo2.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="758.0" layoutY="15.0" prefHeight="60.0" prefWidth="520.0" stylesheets="@../../../css/stylesheet.css">
+         <menus>
+            <Menu mnemonicParsing="false" text="HOME">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToHomePage" text="HOME" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#goToProfile" text="PROFILE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToProfile" text="PROFILE" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="CHAT">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#chatWithAdmin" text="ADMIN" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#chatWithCustomer" text="CUSTOMER" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="SERVICES">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#availableServiceList" text="SERVICES" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="ABOUT US">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="ABOUT US" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="LOG OUT">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#logOut" text="LOGOUT" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="66.0" layoutY="680.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="© 2025, TEAM LEGOS, All rights reserved." textFill="#ea080d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="680.0" style="-fx-font-weight: bold; -fx-text-fill: #ea080d;" stylesheets="@../../../css/stylesheet.css" text="TEAM LEGOS" textFill="#ea080d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="profileView" fitHeight="350.0" fitWidth="350.0" layoutX="149.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="662.0" layoutY="159.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Username: " />
+      <Label layoutX="662.0" layoutY="251.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Fullname:" />
+      <Label layoutX="662.0" layoutY="341.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Contact No:" />
+      <Label layoutX="662.0" layoutY="430.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Email:" />
+      <Button layoutX="236.0" layoutY="561.0" mnemonicParsing="false" onAction="#updateProfilePicture" prefHeight="40.0" prefWidth="175.0" stylesheets="@../../../css/stylesheet.css" text="Change Profile Picture" />
+      <TextField fx:id="UserName" layoutX="806.0" layoutY="149.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <TextField fx:id="FullName" layoutX="806.0" layoutY="241.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <TextField fx:id="Email" layoutX="806.0" layoutY="420.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <TextField fx:id="Phone" layoutX="806.0" layoutY="331.0" prefHeight="40.0" prefWidth="300.0" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <Button layoutX="891.0" layoutY="561.0" mnemonicParsing="false" onAction="#updateProfile" prefHeight="40.0" prefWidth="130.0" stylesheets="@../../../css/stylesheet.css" text="Update Profile" />
+   </children>
+</AnchorPane>

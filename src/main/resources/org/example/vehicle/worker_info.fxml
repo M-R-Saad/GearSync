@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="285.0" prefWidth="500.0" stylesheets="@../../../css/stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.WorkerInfoController">
+    <children>
+        <Label layoutX="30.0" layoutY="30.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Full Name:" />
+        <Label fx:id="fullNameLabel" layoutX="120.0" layoutY="30.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+        <Label layoutX="30.0" layoutY="74.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Phone:" />
+        <Label fx:id="phoneLabel" layoutX="120.0" layoutY="70.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+        <Label layoutX="30.0" layoutY="117.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Email:" />
+        <Label fx:id="emailLabel" layoutX="120.0" layoutY="110.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+        <Label layoutX="30.0" layoutY="163.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Status:" />
+        <Label fx:id="statusLabel" layoutX="120.0" layoutY="150.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+        <ImageView fx:id="workerImageView" fitHeight="150.0" fitWidth="150.0" layoutX="300.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+        <Button layoutX="215.0" layoutY="220.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="70.0" text="Close" />
+    </children>
+</AnchorPane>

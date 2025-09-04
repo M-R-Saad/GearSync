@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefWidth="390.0" spacing="10" style="-fx-background-color: #181617; -fx-padding: 15; -fx-border-color: #737373;" stylesheets="@../../../css/stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.PartsCardControllerAdmin">
+    <ImageView fx:id="partImage" fitHeight="150.0" fitWidth="150.0">
+      <HBox.margin>
+         <Insets top="30.0" />
+      </HBox.margin></ImageView>
+    <VBox spacing="5">
+        <Label fx:id="partName" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+        <Label fx:id="partDescription" wrapText="true" />
+        <Label fx:id="stockStatus" style="-fx-text-fill: red;" />
+         <Spinner fx:id="priceSpinner" prefHeight="35.0" prefWidth="120.0" />
+         <Button fx:id="updatePriceButton" onAction="#handleUpdatePrice" prefHeight="35.0" prefWidth="120.0" text="Update Price" />
+   
+                 <!-- Restock Button -->
+        <Button fx:id="restockButton" onAction="#handleRestock" prefHeight="35.0" prefWidth="120.0" text="Add Stock" />
+      <padding>
+         <Insets left="5.0" />
+      </padding>
+      <HBox.margin>
+         <Insets left="10.0" />
+      </HBox.margin>
+    </VBox>
+</HBox>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.CustomerInvoiceController">
+
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="570.0" fitWidth="1280.0" layoutY="90.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../design/worker_profile1x.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" stroke="#616161" strokeType="INSIDE" width="1280.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" layoutY="660.0" stroke="#616161" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="133.0" fitWidth="317.0" layoutX="7.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../design/logo2.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="598.0" layoutY="15.0" prefHeight="60.0" prefWidth="680.0" stylesheets="@../../../css/stylesheet.css">
+         <menus>
+            <Menu mnemonicParsing="false" text="HOME">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToHomePage" text="HOME" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#goToProfile" text="PROFILE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToProfile" text="PROFILE" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="CHAT">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#chatWithAdmin" text="ADMIN" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#chatWithWorker" text="WORKER" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="SERVICES">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToRequestService" text="SERVICING" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#goToCarWash" text="CAR WASH" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="SHOP">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToVehicleParts" text="BUY PARTS" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="INVOICE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#goToServiceList" text="SERVICING" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#goToInvoice" text="CAR WASH" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="ABOUT US">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="ABOUT US" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="LOG OUT">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#logOut" text="LOGOUT" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="66.0" layoutY="680.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="© 2025, TEAM LEGOS, All rights reserved." textFill="#ea080d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="680.0" style="-fx-font-weight: bold; -fx-text-fill: #ea080d;" stylesheets="@../../../css/stylesheet.css" text="TEAM LEGOS" textFill="#ea080d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <!-- Receipt Table -->
+      <TableView fx:id="carWashTable" layoutX="20.0" layoutY="106.0" prefHeight="475.0" prefWidth="510.0" stylesheets="@../../../css/stylesheet.css">
+         <columns>
+            <TableColumn fx:id="ridColumn" prefWidth="29.0" text="rid" />
+            <TableColumn fx:id="cidColumn" prefWidth="29.0" text="cid" />
+            <TableColumn fx:id="widColumn" prefWidth="36.0" text="wid" />
+            <TableColumn fx:id="cwidColumn" prefWidth="41.0" text="cwid" />
+            <TableColumn fx:id="locationColumn" prefWidth="101.0" text="car_location" />
+            <TableColumn fx:id="carModelColumn" text="car_model" />
+            <TableColumn fx:id="dateTimeColumn" prefWidth="100.0" text="date &amp; time" />
+            <TableColumn fx:id="createdAtColumn" prefWidth="87.0" text="created_at" />
+         </columns>
+      </TableView>
+      <Label layoutX="556.0" layoutY="102.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Plan Name:" />
+      <Label fx:id="planNameLabel" layoutX="634.0" layoutY="102.0" prefHeight="20.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="555.0" layoutY="125.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Description:" />
+      <TextArea fx:id="descriptionArea" editable="false" layoutX="556.0" layoutY="147.0" prefHeight="70.0" prefRowCount="2" prefWidth="450.0" stylesheets="@../../../css/stylesheet.css" wrapText="true" />
+      <Label layoutX="556.0" layoutY="230.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Services:" />
+      <TextArea fx:id="servicesArea" editable="false" layoutX="556.0" layoutY="252.0" prefHeight="70.0" prefRowCount="2" prefWidth="450.0" stylesheets="@../../../css/stylesheet.css" wrapText="true" />
+      <Label layoutX="556.0" layoutY="333.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Vehicle Type:" />
+      <Label fx:id="vehicleTypeLabel" layoutX="668.0" layoutY="334.0" prefHeight="17.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="557.0" layoutY="355.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Price:" />
+      <Label fx:id="priceLabel" layoutX="627.0" layoutY="356.0" prefHeight="17.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="1097.0" layoutY="115.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Plan Picture:" />
+      <ImageView fx:id="planImage" fitHeight="200.0" fitWidth="150.0" layoutX="1063.0" layoutY="160.0" />
+
+            <Separator layoutX="556.0" layoutY="360.0" prefHeight="50.0" prefWidth="690.0" />
+
+            <Label layoutX="557.0" layoutY="407.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Customer &amp; Car Info:" />
+      <Label layoutX="557.0" layoutY="448.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Customer Name:" />
+      <Label fx:id="customerNameLabel" layoutX="685.0" layoutY="449.0" prefHeight="17.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="558.0" layoutY="474.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Mail:" />
+      <Label fx:id="customerMailLabel" layoutX="632.0" layoutY="475.0" prefHeight="17.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="558.0" layoutY="500.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Contact No:" />
+      <Label fx:id="csutomerPhoneLabel" layoutX="666.0" layoutY="501.0" prefHeight="17.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="558.0" layoutY="541.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Car Model:" />
+      <Label fx:id="carModelLabel" layoutX="661.0" layoutY="542.0" prefHeight="17.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="559.0" layoutY="567.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Car Location:" />
+      <Label fx:id="carLocationLabel" layoutX="671.0" layoutY="568.0" prefHeight="17.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="559.0" layoutY="593.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Service Date &amp; Time:" />
+      <Label fx:id="dateTimeLabel" layoutX="719.0" layoutY="594.0" prefHeight="17.0" prefWidth="250.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="1100.0" layoutY="407.0" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" text="Car Picture:" />
+      <ImageView fx:id="carImage" fitHeight="200.0" fitWidth="200" layoutX="1038.0" layoutY="436.0" />
+      <Button layoutX="211.0" layoutY="600.0" onAction="#downloadPDF" prefHeight="40.0" stylesheets="@../../../css/stylesheet.css" text="Download as PDF" />
+   </children>
+</AnchorPane>

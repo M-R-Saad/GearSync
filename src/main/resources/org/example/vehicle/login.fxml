@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.LoginController">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../design/login_bg6.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#131313" height="500.0" layoutX="465.0" layoutY="120.0" stroke="#ffffff00" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="350.0">
+         <effect>
+            <DropShadow height="21.01" offsetX="7.0" offsetY="7.0" radius="10.002500000000001" spread="0.11">
+               <color>
+                  <Color opacity="0.16030535101890564" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fx:id="logoImage" fitHeight="200.0" fitWidth="300.0" layoutX="490.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../design/logo1.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="UserName" layoutX="515.0" layoutY="306.0" prefHeight="40.0" prefWidth="250.0" promptText="Username" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <Button layoutX="515.0" layoutY="501.0" mnemonicParsing="false" onAction="#logIn" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../css/stylesheet.css" text="LOG IN" />
+      <Button layoutX="645.0" layoutY="501.0" mnemonicParsing="false" onAction="#goToSignUp" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../css/stylesheet.css" text="SIGN UP" />
+      <RadioButton fx:id="customer" layoutX="530.0" layoutY="441.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" stylesheets="@../../../css/stylesheet.css" text="Customer">
+         <toggleGroup>
+            <ToggleGroup fx:id="radioButtonGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="worker" layoutX="650.0" layoutY="441.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-label-padding: 0 13;" stylesheets="@../../../css/stylesheet.css" text="Worker" toggleGroup="$radioButtonGroup" />
+      <PasswordField fx:id="Password" layoutX="515.0" layoutY="369.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" style="-fx-font-size: 16px;" stylesheets="@../../../css/stylesheet.css" />
+      <Label layoutX="559.0" layoutY="566.0" stylesheets="@../../../css/stylesheet.css" text="No account? Sign up now!" />
+   </children>
+</AnchorPane>

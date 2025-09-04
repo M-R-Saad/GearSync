@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="cardVBox" alignment="TOP_CENTER" prefHeight="525.0" prefWidth="390.0" spacing="10" style="-fx-background-color: #181617; -fx-border-color: #8f8e8e; -fx-padding: 15;" stylesheets="@../../../css/stylesheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.vehicle.CarWashCardController">
+
+    <ImageView fx:id="planImage" fitHeight="320.0" fitWidth="240.0" preserveRatio="true" />
+
+    <Label fx:id="planName" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: red;" stylesheets="@../../../css/stylesheet.css" wrapText="true" />
+    <Label fx:id="planDescription" stylesheets="@../../../css/stylesheet.css" wrapText="true" />
+    <Label fx:id="planServices" stylesheets="@../../../css/stylesheet.css" wrapText="true" />
+    <Label fx:id="vehicleType" stylesheets="@../../../css/stylesheet.css" wrapText="true" />
+    <Label fx:id="planPrice" style="-fx-font-weight: bold;" stylesheets="@../../../css/stylesheet.css" />
+
+    <Button fx:id="selectButton" text="Select Offer" />
+</VBox>

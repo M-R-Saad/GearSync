@@ -1,0 +1,326 @@
+/* === Base Theme === */
+.root {
+    -fx-font-family: "JetBrains Mono SemiBold", sans-serif;
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #ffffff;
+}
+
+/* === Label Styling === */
+.label {
+    -fx-font-family: "JetBrains Mono SemiBold";
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+}
+
+.label.title {
+    -fx-text-fill: #c60509;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* === Button Styling === */
+.button {
+    -fx-background-color: #c60509;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 0px;
+}
+
+.button:hover {
+    -fx-background-color: #ea080d;
+}
+
+.button:pressed {
+    -fx-background-color: #af070c;
+}
+
+/*!* === ScrollPane Styling === *!*/
+/*.scroll-pane {*/
+/*    -fx-background-color: #121212;*/
+/*    -fx-border-color: transparent;*/
+/*}*/
+/* === ScrollPane Styling === */
+.scroll-pane {
+    -fx-background-color: #1e1e1e; /* Match the dark background of the project */
+    -fx-border-color: #333; /* Subtle border to blend with the theme */
+    -fx-border-radius: 5px; /* Rounded corners for a modern look */
+    -fx-background-radius: 5px;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #121212; /* Slightly darker background for the viewport */
+}
+
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: #1e1e1e; /* Match the scroll bar background with the theme */
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #c60509; /* Red accent for the scroll bar thumb */
+    -fx-background-radius: 5px; /* Rounded thumb for a modern look */
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #ea080d; /* Brighter red on hover */
+}
+
+.scroll-bar .track {
+    -fx-background-color: #2b2b2b; /* Subtle track color */
+}
+
+/* === Table Styling === */
+.table-view {
+    -fx-background-color: #1a1a1a;
+    -fx-table-cell-border-color: transparent;
+    -fx-control-inner-background: #1a1a1a;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #333;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: red !important;
+}
+
+.table-view .column-header .label {
+    -fx-background-color: red ; /* Red background for column headers */
+    -fx-text-fill: white; /* Set the text color to white */
+    -fx-font-weight: bold; /* Make the text bold */
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: #1a1a1a;
+    -fx-border-color: transparent;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #2c2c2c;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #c60509;
+    -fx-text-fill: #ffffff;
+}
+
+/* === TextArea & TextField === */
+.text-area, .text-field {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #444;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 5px;
+}
+
+/* === Spinner === */
+.spinner {
+    -fx-background-color: #2b2b2b;
+    -fx-border-color: #444;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* === Image Card Style === */
+.card {
+    -fx-background-color: #121212;
+    -fx-padding: 15px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 0, 3);
+}
+
+/* === Titles and Section Headings === */
+.heading {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #c60509;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* === RadioButton Styling: Text Only, With Border === */
+.radio-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #888888;
+    -fx-border-width: 2;
+    -fx-border-radius: 0;
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: center;
+    -fx-padding: 0 9;
+}
+
+.radio-button:selected, .radio-button:selected .radio {
+    -fx-border-color: #ff4d30;
+    -fx-text-fill: #ff4d30;
+}
+
+/* Hide default radio circle */
+.radio-button .radio {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+    -fx-background-radius: 0;
+}
+
+/* Center Align MenuBar */
+.menu-bar {
+    -fx-background-color: black;
+    -fx-alignment: center; /* Aligns the menu items to the center */
+}
+
+/* Top Align MenuBar */
+.menu-bar.top {
+    -fx-background-color: black;
+    -fx-alignment: top; /* Aligns the menu items to the top */
+}
+
+/* Bottom Align MenuBar */
+.menu-bar.bottom {
+    -fx-background-color: black;
+    -fx-alignment: bottom; /* Aligns the menu items to the bottom */
+}
+
+/* Menu Styling */
+.menu {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px; /* Increases the font size */
+}
+
+.menu:hover {
+    -fx-text-fill: red;
+}
+
+.menu:selected {
+    -fx-text-fill: red;
+}
+
+/* MenuItem Styling */
+.menu-item {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px; /* Increases the font size */
+}
+
+.menu-item:hover {
+    -fx-background-color: red;
+    -fx-text-fill: black;
+}
+
+.menu-item:selected {
+    -fx-background-color: red;
+    -fx-text-fill: black;
+}
+
+/* ChoiceBox Theme */
+.choice-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 5 10 5 10;
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+    -fx-cursor: hand;
+}
+
+.choice-box:hover {
+    -fx-border-color: #e4002b;
+    -fx-effect: dropshadow(three-pass-box, rgba(228,0,43,0.1), 6, 0, 0, 2);
+}
+
+.choice-box:focused {
+    -fx-border-color: #e4002b;
+    -fx-border-width: 2;
+    -fx-text-fill: #e4002b;
+}
+
+/* Dropdown arrow */
+.choice-box .arrow {
+    -fx-background-color: #e4002b;
+}
+
+/* TextArea Theme */
+.text-area {
+    -fx-background-color: #4d4c4c;
+    -fx-border-color: #8f8e8e;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 5;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.text-area:hover {
+    -fx-border-color: #e4002b;
+    -fx-effect: dropshadow(three-pass-box, rgba(228,0,43,0.1), 6, 0, 0, 2);
+}
+
+.text-area:focused {
+    -fx-border-color: #e4002b;
+    -fx-border-width: 2;
+}
+
+/* Scrollbar (optional matching style) */
+.text-area .scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #e4002b;
+}
+
+
+/* DatePicker overall */
+.date-picker {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10 6 10;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Hover effect */
+.date-picker:hover {
+    -fx-border-color: #e4002b;
+    -fx-effect: dropshadow(three-pass-box, rgba(228,0,43,0.1), 6, 0, 0, 2);
+}
+
+/* Focused state */
+.date-picker:focused {
+    -fx-border-color: #e4002b;
+    -fx-border-width: 2;
+}
+
+/* Calendar button (arrow box) */
+.date-picker .arrow-button {
+    -fx-background-color: #e4002b;
+    -fx-background-radius: 0 6 6 0;
+}
+
+/* Arrow inside calendar button */
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #ffffff;
+}
+
+/* Popup calendar background */
+.date-picker-popup {
+    -fx-background-color: #c4c4c4;
+    -fx-border-color: #e4002b;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+/* Calendar days */
+.date-cell {
+    -fx-font-family: 'Poppins', sans-serif;
+}
+
+.date-cell:hover {
+    -fx-background-color: #fcebec;
+}
+
+.date-cell:focused {
+    -fx-background-color: #e4002b;
+    -fx-text-fill: #dedede;
+}
