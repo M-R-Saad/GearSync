@@ -134,7 +134,7 @@ We believe that vehicle maintenance should be transparent, convenient, and trust
    - Create new accounts through the signup interface
    - Explore all features and functionalities
 
-### � Project Structure
+### 📁 Project Structure
 ```
 GearSync/
 ├── src/main/
