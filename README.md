@@ -1,6 +1,7 @@
 # 🔧 GearSync - Vehicle Service Management System
 
 <div align="center">
+  <img src="src/main/resources/design/logo1.png" alt="GearSync Logo" width="120" height="120">
   <h3>Your Complete Vehicle Maintenance Solution</h3>
   <p><em>Connecting vehicle owners with trusted service providers and car wash facilities for seamless automotive care.</em></p>
 </div>
